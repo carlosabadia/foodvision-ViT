@@ -19,14 +19,6 @@ vit16, vit16_transforms = create_vit16_model(
 )
 
 
-state_dict = torch.load("model_food101_20_percent.pth")
-state_dict["heads.0.weight"] = state_dict.pop("heads.weight")
-state_dict["heads.0.bias"] = state_dict.pop("heads.bias")
-# save new state_dict in .pth
-torch.save(state_dict, "model_food101_20_percent.pth")
-
-
-
 vit16.load_state_dict(
     torch.load(
         f="model_food101_20_percent.pth",
