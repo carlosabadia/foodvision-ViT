@@ -6,7 +6,7 @@ from torch import nn
 
 def create_vit16_model(num_classes:int=101, 
                           seed:int=42):
-    """Creates an EfficientNetB2 feature extractor model and transforms.
+    """Creates an vit16 feature extractor model and transforms.
 
     Args:
         num_classes (int, optional): number of classes in the classifier head. 
