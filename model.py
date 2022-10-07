@@ -28,8 +28,7 @@ def create_vit16_model(num_classes:int=101,
 
     # Change classifier head with random seed for reproducibility
     torch.manual_seed(seed)
-    model.classifier = nn.Sequential(
-        nn.Linear(in_features=768, out_features=num_classes).to("cpu"),
-    )
+    model.heads = nn.Sequential(nn.Linear(in_features=768, # keep this the same as original model
+                                          out_features=num_classes)) # update to reflect target number of classes
     
     return model, transforms
