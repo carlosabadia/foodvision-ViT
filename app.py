@@ -59,7 +59,7 @@ def predict(img) -> Tuple[Dict, float]:
 
 # Create title, description and article strings
 title = "FoodVision ViT 🍔👁"
-description = "An ViT_B_16 feature extractor computer vision model to classify images of food into 101 different classes using 20% of the data."
+description = "A ViT_B_16 feature extractor computer vision model to classify images of food into 101 different classes using 20% of the data."
 article = ""
 
 # Create examples list from "examples/" directory
